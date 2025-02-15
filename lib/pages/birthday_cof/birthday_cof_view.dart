@@ -11,8 +11,8 @@ class BirthdayCofView extends GetView<PageLogic> {
     return Scaffold(
       body: Center(
         child: Obx(
-          () => controller.moen.value
-              ? const CircularProgressIndicator(color: Colors.green)
+          () => controller.bosco.value
+              ? const CircularProgressIndicator(color: Colors.yellow)
               : buildError(),
         ),
       ),
@@ -26,7 +26,7 @@ class BirthdayCofView extends GetView<PageLogic> {
         children: [
           IconButton(
             onPressed: () {
-              controller.txlyac();
+              controller.rjzwq();
             },
             icon: const Icon(
               Icons.restart_alt,

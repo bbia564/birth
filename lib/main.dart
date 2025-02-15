@@ -1,7 +1,10 @@
 
 import 'package:birthday_record/db_birthday/db_birthday.dart';
+import 'package:birthday_record/pages/birthday_cof/birthday_cof_binding.dart';
+import 'package:birthday_record/pages/birthday_cof/birthday_cof_view.dart';
 import 'package:birthday_record/pages/birthday_first/birthday_first_binding.dart';
 import 'package:birthday_record/pages/birthday_first/birthday_first_view.dart';
+import 'package:birthday_record/pages/birthday_second/birthday_input_f.dart';
 import 'package:birthday_record/pages/birthday_second/birthday_second_binding.dart';
 import 'package:birthday_record/pages/birthday_second/birthday_second_view.dart';
 import 'package:birthday_record/pages/birthday_tab/birthday_tab_binding.dart';
@@ -31,7 +34,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       getPages: Soa,
-      initialRoute: '/birthday_tab',
+      initialRoute: '/',
       theme: ThemeData(
         useMaterial3: true,
         primaryColor: primaryColor,
@@ -83,9 +86,11 @@ class MyApp extends StatelessWidget {
   }
 }
 List<GetPage<dynamic>> Soa = [
+  GetPage(name: '/', page: () => const BirthdayCofView(), binding: BirthdayCofBinding()),
   GetPage(name: '/birthday_first', page: () => BirthdayFirstPage(), binding: BirthdayFirstBinding()),
   GetPage(name: '/birthday_second', page: () => BirthdaySecondPage(), binding: BirthdaySecondBinding()),
   GetPage(name: '/birthday_third', page: () => BirthdayThirdPage(), binding: BirthdayThirdBinding()),
   GetPage(name: '/birthday_tab', page: () => BirthdayTabPage(), binding: BirthdayTabBinding()),
+  GetPage(name: '/birthday_inp', page: () => const BirthdayInputF()),
   GetPage(name: '/no_network', page: () => NoNetworkPage(), binding: NoNetworkBinding()),
 ];
