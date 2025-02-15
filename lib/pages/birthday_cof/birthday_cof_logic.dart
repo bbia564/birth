@@ -105,7 +105,6 @@ class PageLogic extends GetxController {
       inlqmhc = yngfehwtbq.identifierForVendor ?? "";
       kuwh  = yngfehwtbq.isPhysicalDevice;
     }
-    kuwh = true;
     var res = {
       "gkxnpy": gkxnpy,
       "slkr": slkr,
